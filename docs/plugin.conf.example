@@ -1,0 +1,61 @@
+pluginName="plugin-mlcore"
+
+mlmodels {
+  fs = "file://"
+  path = "/mnt/glfs/mlmodels/"
+}
+
+loglevel = "src/main/resources/loglevel.properties"
+
+configBasePath = "/mnt/glfs/mlmodels/conf"
+
+fit {
+    linear_regression = "ot.dispatcher.plugins.mlcore.regression.LinearRegression"
+    linreg = "ot.dispatcher.plugins.mlcore.regression.LinearRegression"
+    lr = "ot.dispatcher.plugins.mlcore.regression.LinearRegression"
+    random_forest_regression = "ot.dispatcher.plugins.mlcore.regression.RandomForestRegressor"
+    rf_regression = "ot.dispatcher.plugins.mlcore.regression.RandomForestRegressor"
+    rf_r = "ot.dispatcher.plugins.mlcore.regression.RandomForestRegressor"
+    random_forest_classification = "ot.dispatcher.plugins.mlcore.classification.RandomForestClassifier"
+    rf_classification = "ot.dispatcher.plugins.mlcore.classification.RandomForestClassifier"
+    rf_c = "ot.dispatcher.plugins.mlcore.classification.RandomForestClassifier"
+    gradient_boosting_regression = "ot.dispatcher.plugins.mlcore.regression.GradientBoostingClassifier"
+    gb_regression = "ot.dispatcher.plugins.mlcore.regression.GradientBoostingClassifier"
+    gb_r = "ot.dispatcher.plugins.mlcore.regression.GradientBoostingClassifier"
+    gradient_boosting_classification = "ot.dispatcher.plugins.mlcore.classification.GradientBoostingClassifier"
+    gb_classification = "ot.dispatcher.plugins.mlcore.classification.GradientBoostingClassifier"
+    gb_c = "ot.dispatcher.plugins.mlcore.classification.GradientBoostingClassifier"
+    logistic_regression = "ot.dispatcher.plugins.mlcore.classification.LogisticRegression"
+    logreg = "ot.dispatcher.plugins.mlcore.classification.LogisticRegression"
+    pca = "ot.dispatcher.plugins.mlcore.feature.PrincipalComponentAnalysis"
+    kmeans = "ot.dispatcher.plugins.mlcore.clustering.KMeansClustering"
+    isolation_forest = "ot.dispatcher.plugins.mlcore.anomaly.IsolationForest"
+    if = "ot.dispatcher.plugins.mlcore.anomaly.IsolationForest"
+    scaling = "ot.dispatcher.plugins.mlcore.feature.Scaling"
+    imputer = "ot.dispatcher.plugins.mlcore.feature.Imputer"
+    dtc = "ot.dispatcher.plugins.mlcore.classification.DecisionTreeClf"
+    decision_tree_classifier = "ot.dispatcher.plugins.mlcore.classification.DecisionTreeClf"
+    catboost_clf="ot.dispatcher.plugins.mlcore.classification.CatboostClassifier"
+    catboost_reg="ot.dispatcher.plugins.mlcore.regression.CatboostCatboostRegressor"
+}
+
+score {
+
+}
+
+apply {
+    default = "ot.dispatcher.plugins.small.algos.apply.SavedModel"
+    iqr = "ot.dispatcher.plugins.mlcore.anomaly.IQR"
+    local_outlier_factor = "ot.dispatcher.plugins.mlcore.anomaly.LocalOutlierFactor"
+    lof = "ot.dispatcher.plugins.mlcore.anomaly.LocalOutlierFactor"
+    median_absolute_deviation = "ot.dispatcher.plugins.mlcore.anomaly.MAD"
+    mad = "ot.dispatcher.plugins.mlcore.anomaly.MAD"
+    zscore = "ot.dispatcher.plugins.mlcore.anomaly.ZScore"
+    dbscan = "ot.dispatcher.plugins.mlcore.clustering.DBSCAN"
+    correlation = "ot.dispatcher.plugins.mlcore.stat.Correlation"
+    corr = "ot.dispatcher.plugins.mlcore.stat.Correlation"
+    predict = "ot.dispatcher.plugins.mlcore.ts.TimeSeriesPredictor"
+    sampling = "ot.dispatcher.plugins.mlcore.feature.Sampling"
+    fillna = "ot.dispatcher.plugins.mlcore.feature.FillNA"
+    bucket = "ot.dispatcher.plugins.mlcore.stat.Bucket"
+}

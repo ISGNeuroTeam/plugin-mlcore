@@ -1,0 +1,40 @@
+*.class
+*.log
+*.swp
+
+# catboost specific
+catboost_training.json
+delay_matrix.bin
+learn_error.tsv
+test_error.tsv
+time_left.tsv
+test/events.out.tfevents
+learn
+
+# sbt specific
+.cache/
+.history/
+.lib/
+dist/*
+target/
+lib_managed/
+src_managed/
+project/
+
+# Scala-IDE specific
+.scala_dependencies
+.worksheet
+.idea
+
+#Metals plugin
+.metals/
+.bloop/
+~                                                                                                                    
+~
+
+# build, pack, etc.
+*.tgz
+*.tar.gz
+build/
+.bsp/
+

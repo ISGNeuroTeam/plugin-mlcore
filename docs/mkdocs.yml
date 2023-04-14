@@ -1,0 +1,55 @@
+site_name: Плагин MLCore
+nav:
+    - MLCore:
+      - index.md
+      - Демонстрационные датасеты: datasets.md
+      - Классификация:
+        - Логистическая регрессия: classification/logreg.md
+        - Решающее дерево: classification/decision_tree.md
+        - Случайный лес: classification/rf.md
+        - Градиентный бустинг: classification/gb.md
+        - CatBoost: classification/catboost.md
+      - Регрессия:
+        - Линейная регрессия: regression/lr.md
+        - Случайный лес: regression/rf.md
+        - Градиентный бустинг: regression/gb.md
+        - CatBoost: regression/catboost.md
+      - Кластеризация:
+          - K-Means: clustering/kmeans.md
+          - DBSCAN: clustering/dbscan.md
+      - "Временные ряды":
+        - "Определение тренда": ts/trend_detection.md
+        - Прогнозирование: ts/predict.md
+      - "Поиск аномалий":
+        - "Local Outlier Factor": anomaly/lof.md
+        - Z-score: anomaly/zscore.md
+        - IQR: anomaly/iqr.md
+        - MAD: anomaly/mad.md
+        - Isolation Forest: anomaly/if.md
+      - "Работа с признаками":
+        - PCA: features/pca.md
+        - "Заполнение пропусков":
+            - Fill NA: features/fillna.md
+            - Imputer: features/imputer.md
+        - Сэмплирование: features/sample.md
+        - Масштабирование (scaling): features/scaling.md
+      - "Статистические функции":
+        - Корреляции Пирсона и Спирмена: stats/correlation.md
+theme:
+    name: material
+    palette:
+        primary: indigo
+    language: ru
+    features:
+        - navigation.sections
+        - navigation.indexes
+        - navigation.top
+        - toc.integrate
+    icon:
+        repo: fontawesome/brands/git
+repo_url: https://github.com/ISGNeuroTeam/plugin-mlcore
+repo_name: ISGN MLCore Plugin
+extra:
+    social:
+      - icon: fontawesome/brands/youtube
+        link: https://www.youtube.com/channel/UCt29c_xfFLEq6H9hV0ck3qA
